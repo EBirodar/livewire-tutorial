@@ -32,15 +32,13 @@
                 <input type="number" class="col-4" value="1" wire:model="currencyy.{{ $currency['id']}}">
             </div>
             @endforeach
-        <div class="flex justify-between">
+        </div>
+        <div class="d-flex justify-content-between">
             <h2>{{$amount}}</h2>
-{{--            <h2>{{$newAmountUsd+$newAmountUzs/11000+$newAmountEuro/1.1}}</h2>--}}
+
+            <h2>{{$total}}</h2>
         </div>
 
-            @foreach($currencyy as $ass)
-                {{ $ass }}
-            @endforeach
-        {{$newbalance}}
 
     </form>
 </div>

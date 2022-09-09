@@ -8,13 +8,10 @@ class Tasks extends Component
 {
     public $amount=1000;
     public $newbalance;
-    public $oldamount=1000;
     public $balance;
     public $currencyType=1;
-    public $usd=1;
-    public $usz=11000;
     public $currencyy = [];
-    public $euro=1.1;
+    public $total=0;
     public $currencies=[
         [
             'id'=>1,
@@ -48,8 +45,10 @@ class Tasks extends Component
                 }
                 $this->newbalance=$item*$this->currencyType/$x;
                 $this->balance-=$this->newbalance;
+
             }
             $this->balance=$this->balance/$this->currencyType;
+            $this->total=$this->amount-$this->balance;
         }
 
     }
